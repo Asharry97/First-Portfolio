@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    color: white;
+    z-index: 999;
+    width: 100%;
+}
+
+.brand-title {
+    margin: .5rem;    
+    color: black;
+}
+
+.brand-title a {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    font-weight: 700;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* Shrink To Left For Mobile First Approach */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+.main-bar {
+    padding-top: 65px;
+    padding-bottom: 60px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.foot-bar{
+    padding: 3px;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+footer ul li {
+    list-style-type: none;
+    padding: 6px;
+}
+
+footer ul li img { 
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
